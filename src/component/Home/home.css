@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0px 10px 10px 5px rgba(160, 151, 151, 0.55);
+  -webkit-box-shadow: 0px 10px 10px 5px rgba(160, 151, 151, 0.55);
+  -moz-box-shadow: 0px 10px 10px 5px rgba(160, 151, 151, 0.55);
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main {
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+  justify-content: center;
+  flex-direction: column;
+}
+.homeForm .field,
+.homeForm .name {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 3vh;
+}
+.homeForm .field input {
+  background: transparent;
+  outline-width: 0;
+  border: none;
+  margin-left: 1vw;
+  font-size: 18px;
+  width: 40vw;
+}
+.homeForm .name input {
+  background: transparent;
+  outline-width: 0;
+  border: none;
+  margin-left: 1vw;
+  font-size: 18px;
+  width: 20vw;
+}
+
+.homeForm button {
+  background: transparent;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  padding: 10px 5vw;
+  border-radius: 10px;
+  margin-top: 4vh;
+  font-size: larger;
+}
+
+.homeForm button:hover {
+  color: white;
+  background-color: gray;
+}
+
+.info {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+}
+.info img {
+  height: 400px;
+  width: 400px;
+  border-radius: 250px;
+  margin-bottom: 2vh;
+}

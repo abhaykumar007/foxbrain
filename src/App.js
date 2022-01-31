@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import Login from "./component/Login/Login";
+import Registration from "./component/Registration/Registration";
+import Home from "./component/Home/Home";
 function App() {
+  function PrivateRoute({ Component, path }) {
+    let user = localStorage.getItem("login");
+    return (
+      <Route
+        path={path}
+        render={(props) =>
+          user ? <Component {...props} /> : <Redirect to="/" />
+        }
+      />
+    );
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/registration" exact component={Registration} />
+          <PrivateRoute exact path={"/home"} Component={Home} />
+        </Switch>
+      </Router>
     </div>
   );
 }

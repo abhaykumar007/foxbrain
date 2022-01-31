@@ -1,0 +1,71 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+  height: auto;
+}
+.registration-form .name,
+.registration-form .field {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 3vh;
+}
+.registration-form .name input {
+  background: transparent;
+  outline-width: 0;
+  border: none;
+  margin-left: 1vw;
+  font-size: 18px;
+  width: 20vw;
+}
+.registration-form .field input,
+.registration-form .field select {
+  background: transparent;
+  outline-width: 0;
+  border: none;
+  margin-left: 1vw;
+  font-size: 18px;
+  width: 40vw;
+}
+.registration-form .field select {
+  color: gray;
+}
+.registration-form .field select option {
+  color: black;
+}
+
+.registration-form button {
+  background: transparent;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20vw;
+  border-radius: 10px;
+  margin-top: 4vh;
+  font-size: larger;
+  color: orange;
+}
+.registration-form button:hover {
+  background-color: orange;
+  border: 1px solid black;
+  color: white;
+}
+
+.registration a {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
